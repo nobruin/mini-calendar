@@ -1,0 +1,120 @@
+{
+  "tournament": "FIFA World Cup 2026",
+  "idCompetition": "17",
+  "idSeason": "285023",
+  "team": "BRA",
+  "teamName": "Brazil",
+  "source": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023",
+  "generatedAt": "2026-06-02T13:16:39.096421Z",
+  "matchCount": 3,
+  "matches": [
+    {
+      "matchNumber": 7,
+      "idMatch": "400021456",
+      "dateUtc": "2026-06-13T22:00:00Z",
+      "dateLocal": "2026-06-13T18:00:00Z",
+      "stage": "First Stage",
+      "group": "Group C",
+      "matchday": null,
+      "matchStatus": 1,
+      "home": {
+        "name": "Brazil",
+        "country": "BRA",
+        "abbreviation": "BRA",
+        "idTeam": "43924",
+        "flagUrl": "https://api.fifa.com/api/v3/picture/flags-{format}-{size}/BRA"
+      },
+      "away": {
+        "name": "Morocco",
+        "country": "MAR",
+        "abbreviation": "MAR",
+        "idTeam": "43872",
+        "flagUrl": "https://api.fifa.com/api/v3/picture/flags-{format}-{size}/MAR"
+      },
+      "score": {
+        "home": null,
+        "away": null,
+        "homePenalty": null,
+        "awayPenalty": null
+      },
+      "venue": {
+        "stadium": "New York/New Jersey Stadium",
+        "city": "New York",
+        "country": "USA"
+      },
+      "winner": null
+    },
+    {
+      "matchNumber": 29,
+      "idMatch": "400021457",
+      "dateUtc": "2026-06-20T00:30:00Z",
+      "dateLocal": "2026-06-19T20:30:00Z",
+      "stage": "First Stage",
+      "group": "Group C",
+      "matchday": null,
+      "matchStatus": 1,
+      "home": {
+        "name": "Brazil",
+        "country": "BRA",
+        "abbreviation": "BRA",
+        "idTeam": "43924",
+        "flagUrl": "https://api.fifa.com/api/v3/picture/flags-{format}-{size}/BRA"
+      },
+      "away": {
+        "name": "Haiti",
+        "country": "HAI",
+        "abbreviation": "HAI",
+        "idTeam": "43908",
+        "flagUrl": "https://api.fifa.com/api/v3/picture/flags-{format}-{size}/HAI"
+      },
+      "score": {
+        "home": null,
+        "away": null,
+        "homePenalty": null,
+        "awayPenalty": null
+      },
+      "venue": {
+        "stadium": "Philadelphia Stadium",
+        "city": "Philadelphia",
+        "country": "USA"
+      },
+      "winner": null
+    },
+    {
+      "matchNumber": 49,
+      "idMatch": "400021455",
+      "dateUtc": "2026-06-24T22:00:00Z",
+      "dateLocal": "2026-06-24T18:00:00Z",
+      "stage": "First Stage",
+      "group": "Group C",
+      "matchday": null,
+      "matchStatus": 1,
+      "home": {
+        "name": "Scotland",
+        "country": "SCO",
+        "abbreviation": "SCO",
+        "idTeam": "43967",
+        "flagUrl": "https://api.fifa.com/api/v3/picture/flags-{format}-{size}/SCO"
+      },
+      "away": {
+        "name": "Brazil",
+        "country": "BRA",
+        "abbreviation": "BRA",
+        "idTeam": "43924",
+        "flagUrl": "https://api.fifa.com/api/v3/picture/flags-{format}-{size}/BRA"
+      },
+      "score": {
+        "home": null,
+        "away": null,
+        "homePenalty": null,
+        "awayPenalty": null
+      },
+      "venue": {
+        "stadium": "Miami Stadium",
+        "city": "Miami",
+        "country": "USA"
+      },
+      "winner": null
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{{ month_name }} {{ year }} — Mini Calendar{% endblock %}
+
+{% block content %}
+<div class="calendar-header">
+    <a href="/?year={{ prev_year }}&month={{ prev_month }}" class="btn btn-secondary">&#8592; Prev</a>
+    <h2>{{ month_name }} {{ year }}</h2>
+    <a href="/?year={{ next_year }}&month={{ next_month }}" class="btn btn-secondary">Next &#8594;</a>
+</div>
+
+<div class="calendar-grid">
+    <div class="day-header">Mon</div>
+    <div class="day-header">Tue</div>
+    <div class="day-header">Wed</div>
+    <div class="day-header">Thu</div>
+    <div class="day-header">Fri</div>
+    <div class="day-header">Sat</div>
+    <div class="day-header">Sun</div>
+
+    {% for week in weeks %}
+        {% for day in week %}
+            {% if day == 0 %}
+                <div class="day empty"></div>
+            {% else %}
+                <div class="day{% if today.day == day and today.month == month and today.year == year %} today{% endif %}">
+                    <div class="day-number">{{ day }}</div>
+                    {% for event in events_by_day.get(day, []) %}
+                        <a href="/events/{{ event.id }}" class="event-chip {{ event.status }}">
+                            {{ event.title }}
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</div>
+{% endblock %}

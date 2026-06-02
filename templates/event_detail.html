@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}{{ event.title }} — Mini Calendar{% endblock %}
+
+{% block content %}
+<div class="detail-card">
+
+    <h2>{{ event.title }}</h2>
+    <span class="status-badge {{ event.status }}">{{ event.status | capitalize }}</span>
+
+    <div class="detail-field">
+        <div class="label">When</div>
+        <div class="value">
+            {{ event.start_datetime.strftime('%A, %B %-d, %Y') }}<br>
+            {{ event.start_datetime.strftime('%H:%M') }} &ndash; {{ event.end_datetime.strftime('%H:%M') }}
+        </div>
+    </div>
+
+    {% if event.location %}
+    <div class="detail-field">
+        <div class="label">Location</div>
+        <div class="value">{{ event.location }}</div>
+    </div>
+    {% endif %}
+
+    {% if event.description %}
+    <div class="detail-field">
+        <div class="label">Description</div>
+        <div class="value">{{ event.description }}</div>
+    </div>
+    {% endif %}
+
+    <div class="detail-field">
+        <div class="label">Created</div>
+        <div class="value">{{ event.created_at.strftime('%Y-%m-%d %H:%M') }}</div>
+    </div>
+
+    <div class="detail-actions">
+        {% if event.status == 'scheduled' %}
+            <a href="/events/{{ event.id }}/edit" class="btn btn-primary">Edit</a>
+            <form method="post" action="/events/{{ event.id }}/cancel" style="display:inline">
+                <button type="submit" class="btn btn-secondary"
+                        onclick="return confirm('Cancel this event?')">Cancel Event</button>
+            </form>
+        {% endif %}
+        <form method="post" action="/events/{{ event.id }}/delete" style="display:inline">
+            <button type="submit" class="btn btn-danger"
+                    onclick="return confirm('Delete this event permanently?')">Delete</button>
+        </form>
+        <a href="/" class="btn btn-secondary">&#8592; Back</a>
+    </div>
+
+</div>
+{% endblock %}
